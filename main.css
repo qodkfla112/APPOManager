@@ -1,13 +1,17 @@
 *{margin:0px; padding: 0px; letter-spacing: -1; color:#222}
-ul{list-style: none;}
-a{text-decoration: none;}
-.clearfix:after{content: ''; display: block; clear: both}
+html, body{width: 100%; height: 100%;}
+.team-viewer-main{width: 100%; height: 100%;}
+.team-viewer-main ul{list-style: none;}
+.team-viewer-main a{text-decoration: none;}
+.team-viewer-main .clearfix:after{content: ''; display: block; clear: both}
 
-.team-viewer{width:100%; height: 1024px; overflow: hidden;}
-.header{width:100%;}
+.team-viewer{width:100%; height: 100%; overflow: hidden;}
+.header{
+    width:100%;
+    height:58px; 
+}
 .on-air{
     width:100%; 
-    height:58px; 
     line-height: 58px;
     margin: 0 auto; 
     position: relative; 
@@ -28,25 +32,30 @@ a{text-decoration: none;}
 .on-air ul li span.number{font-weight: bold; color:#fff}
 .on-air h3{text-align: center; font-size: 2em; color:#FDEBEB;}
 
-.reservation-w{width:100%; overflow: hidden;}
+.reservation-w{width:100%; height: calc(100% - 58px); overflow: hidden;}
 .reservation-w li{float: left;}
-.reservation-w .left{width:70%; height: 1024px;}
+.reservation-w .left{width:calc(100% - 395px); height: 100%; }
 .reservation-w .left .top-area{
     width:100%; 
-    height: 49px; 
+    height: 98px; 
     line-height: 49px; 
     background-color: #fff;
     position: relative;
 }
-.reservation-w .left .top-area .date-area{text-align: center;}
-.reservation-w .left .top-area .date-area span.date{font-size: 1.5em;}
-.reservation-w .left .top-area .team-pick-btn{     
+.reservation-w .left .top-area .dateTeamArea .date-area{text-align: center; height: 49px;}
+.reservation-w .left .top-area .dateTeamArea .date-area span.date{font-size: 1.5em;}
+.reservation-w .left .top-area .dateTeamArea .team-pick-btn{     
     position: absolute;
     top:0px; right:14px;
+    height: 49px;
 }
 .reservation-w .left .top-area .team-pick-btn a{color:#222; font-weight: bolder; font-size: 1.2em;}
 
-.reservation-w .left .bot-area{width:100%;}
+.reservation-w .left .bot-area{
+    width:100%;
+    height: calc(100% - 98px);
+    overflow: scroll;
+}
 .reservation-w .left .bot-area table{
     border-spacing: 0; 
     border-collapse:collapse; 
@@ -58,27 +67,42 @@ a{text-decoration: none;}
 }
 .reservation-w .left .bot-area table td:first-child{border-left: 0px;}
 .reservation-w .left .bot-area table td:last-child{border-right: 0px;}
-.reservation-w .left .bot-area table tr.reserv-title td{
-    text-align: center; 
-    height: 50px; 
+.reservation-w .left .top-area .reserv-title{
+    height: 47px;
     background-color: #FCFAF4;
-    border: 1px solid #D89F6C;
+    border-top: 1px solid #D89F6C;
+    border-bottom: 1px solid #D89F6C;
     border-right: 0px;
-    border-left: 0px;
+    border-left: 1px solid #D89F6C;
+    position:relative;
 }
-.reservation-w .left .bot-area table tr.reserv-title td:first-child{
+.reservation-w .left .top-area .reserv-title div{  
+    width:100%;  
+    height: 100%;
+    display: table-cell;
+    text-align: center; 
+}
+.reservation-w .left .top-area .reserv-title div:first-child{
     border-right: 2px solid #D89F6C;
+    width:115px;
+    text-align: center;
+}
+.reservation-w .left .top-area .reserv-title div:last-child{
+    width:calc(100% - 115px);
+    position: absolute;
+    top: 0px;
+    left: 117px;
 }
 .reservation-w .left .bot-area table td.time{
     text-align: center; 
     font-size: 1.2em;
     font-weight: normal;
     border-right: 2px solid #D89F6C;
-/*    border-left:1px solid #D89F6C;*/
+    border-left:1px solid #D89F6C;
     width:115px; height: 110px;
 }
 .reservation-w .left .bot-area table td.reserv{
-    width:285px; height: 110px;
+    height: 110px;
     padding: 10px;
     box-sizing: border-box;
     line-height: 1.5;
@@ -86,10 +110,10 @@ a{text-decoration: none;}
 }
 
 .reservation-w .right{
-    width:29.9%; height: 966px;
+    width:395px; height: 100%;
     background-color: #FCFAF4;  
     border-left:1.4px solid #D89F6C;
-    padding: 26px 20.5px;
+    padding: 18px 20px;
     box-sizing: border-box;
 }
 .reservation-w .right .treatment-btn{
@@ -117,7 +141,7 @@ a{text-decoration: none;}
     color: rgb(212,85,74);
 }
 
-.reservation-w .right .patient-info{width:355px; padding: 10px}
+.reservation-w .right .patient-info{width:355px; padding: 20px 0;}
 .reservation-w .right .patient-info h4{font-size: 25px; font-weight: bold; margin-bottom: 20px;}
 .reservation-w .right .patient-info .info-box{padding-bottom: 20px; border-bottom: 1px solid #ddd;}
 .reservation-w .right .patient-info .info-box ul{}
@@ -165,7 +189,7 @@ a{text-decoration: none;}
 .reservation-w .right .patient-btn{
     text-align: center; 
     padding-top: 10px;
-    width:375px;
+    width:355px;
 }
 .reservation-w .right .patient-btn a{
     width:175px; height: 44px;
@@ -179,9 +203,10 @@ a{text-decoration: none;}
 .reservation-w .right .patient-btn a.booking-btn{
     background: #D89F6C;
     color:#fff;
+    height: 46px;
 }
 .reservation-w .right .patient-btn a.notice-btn{
-    width:175px;
+    width:172px;
     background-color: #fff;
     border: 1px solid #D89F6C;
     color: #D89F6C;
