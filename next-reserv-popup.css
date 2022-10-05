@@ -1,14 +1,75 @@
 *{margin:0px; padding: 0px; letter-spacing: -1; color:#222}
 .nextReservationPopup ul{list-style:none;}
 .nextReservationPopup a{text-decoration: none;}
+.clearfix:after{content: ''; display: block; clear: both;}
 
 .nextReserveBg{width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.5);}
 
 
-.nextReservePop{}
-.nextReservePop .header{}
-.nextReservePop .header span.popup-tit{}
-.nextReservePop .header a{}
+.nextReservePop{
+    width:525px; height: auto;
+    background-color: #FCFAF4;
+    box-shadow: 0 0 0 1px #D89F6C inset;
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+}
+.nextReservePop header{
+    width:100%;
+    height: 36px;
+    background-color: #D89F6C;
+    padding:0 15px;
+    box-sizing: border-box;
+    position:relative;
+}
+.nextReservePop header span.popup-tit{
+    line-height: 36px; 
+    font-size: 14px;
+    color:#fff;
+}
+.nextReservePop header a{
+    line-height: 36px; 
+    position:absolute; 
+    top:0px; right:15px;
+}
+
+.nextReservPopInner{padding: 30px; box-sizing: border-box;}
+.nextReservPopInner .next-time{}
+.nextReservPopInner .next-time ul{}
+.nextReservPopInner .next-time ul li{width:100%}
+.nextReservPopInner .next-time ul li.timeTitle{}
+.nextReservPopInner .next-time ul li.timeTitle h5{
+    font-size: 20px; width: 200px; 
+    line-height: 45px;
+    display: inline-block;
+}
+.nextReservPopInner .next-time ul li.timeTitle span.time-box{
+    width:213px; height: 45px; line-height: 45px;
+    padding:0 10px;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #ccc inset;
+    display: inline-block;
+}
+.nextReservPopInner .next-time ul li.timeClickBtn{padding-top: 10px;}
+.nextReservPopInner .next-time ul li.timeClickBtn span.time-btn{
+    width:105.5px; height: 50px; line-height: 50px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bolder;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #F3DCC7 inset;
+    border-radius: 5px;
+    cursor: pointer;
+    color:#666;
+}
+.nextReservPopInner .next-time ul li.timeClickBtn span.time-btn:hover{
+    background-color: #F3DCC7;
+    color:#fff;
+}
+
+.nextReservPopInner .next-info{}
+.nextReservPopInner .next-reserv{}
+.nextReservPopInner .next-reservList{}
 
 
 
