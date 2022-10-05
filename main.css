@@ -5,6 +5,59 @@ html, body{width: 100%; height: 100%;}
 .team-viewer-main a{text-decoration: none;}
 .team-viewer-main .clearfix:after{content: ''; display: block; clear: both}
 
+
+/* 마우스 클릭했을때 */
+.slot_mouseClick{
+    box-shadow: 0 0 0 5px rgb(94, 123, 183) inset; 
+    background-color: rgba(0, 0, 0, 0.5) !important;
+   
+}
+
+/* 진료중 */
+.slot_reservUndertreatment{background-color: #FDE6CF;}
+.top_thin{box-shadow: 0px 2px 7px 0px rgba(183, 95, 95, 0.3) inset;}
+.top_bold{box-shadow: 0px 8px 7px 0px rgba(156, 99, 99, 0.3) inset;}
+.left_thin{box-shadow: 2px 0px 7px 0px rgba(156, 99, 99, 0.3) inset;}
+.left_bold{box-shadow: 8px 0px 7px 0px rgba(156, 99, 99, 0.3) inset;}
+.right_thin{box-shadow: -2px 0px 7px 0px rgba(156, 99, 99, 0.3) inset;}
+.right_bold{box-shadow: -8px 0px 7px 0px rgba(156, 99, 99, 0.3) inset;}
+.bottom_thin{box-shadow: 0px -2px 7px 0px rgba(156, 99, 99, 0.3) inset;}
+.bottom_bold{box-shadow: 0px -8px 7px 0px rgba(210, 128, 128, 0.3) inset;}
+
+/* 신환 */
+.slot_reservNewPatient{box-shadow: -5px 0px 0 0px rgb(178, 41, 28) inset;}
+
+/* 진료 완료 */
+.slot_treatmentCompleted{background-color: rgba(0, 0, 0, 0.5);}
+
+/* 예약환자 기본상태 */
+.slot_defaultState{background-color: rgb(252, 250, 244);}
+
+/* 노쇼환자 */
+.slot_noShowPatient{
+    background: rgba(0, 0, 0, 0.5) url(/images/no-show.png) no-repeat center center / 70%;
+}
+
+/* 취소환자 */
+.slot_canceledPatient{
+    background: rgba(0, 0, 0, 0.5) url(/images/canceled.png) no-repeat center center / 70%;
+}
+.slot_realCanceledPatient{background: rgba(0, 0, 0, 0.5);}
+
+/* 체인지환자 */
+.slot_changedPatient{
+    background: rgba(0, 0, 0, 0.5) url(/images/changed.png) no-repeat center center / 70%;
+}
+
+/* 슬롯닫기 */
+.slot_closed{
+    background: rgba(215, 226, 236, 0.2) url(/images/slot-close.png) no-repeat center center / 12%;
+}
+
+
+
+
+
 .team-viewer{width:100%; height: 100%; overflow: hidden;}
 .header{
     width:100%;
@@ -12,6 +65,7 @@ html, body{width: 100%; height: 100%;}
 }
 .on-air{
     width:100%; 
+    height: 58px;
     line-height: 58px;
     margin: 0 auto; 
     position: relative; 
@@ -30,7 +84,7 @@ html, body{width: 100%; height: 100%;}
     margin-left: 8px;
 }
 .on-air ul li span.number{font-weight: bold; color:#fff}
-.on-air h3{text-align: center; font-size: 2em; color:#FDEBEB;}
+.on-air h3{text-align: center; font-size: 2em; color:#FDEBEB; line-height: inherit;}
 
 .reservation-w{width:100%; height: calc(100% - 58px); overflow: hidden;}
 .reservation-w li{float: left;}
